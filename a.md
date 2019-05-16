@@ -14,10 +14,24 @@ I-download ang file na ito
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <p>Sa example na ito, ida-download ng browser ang file na <code>android-chrome-192x192.png</code> sa halip na i-display ito. Bukod pa riyan, ang magiging default filename nito ay ang value ng <code>download</code> attribute na <code>antares-logo.png</code>.</p>
+<h4 id="notes">Notes:</h4>
+<ul>
+<li>Gumagana lang ang attribute na ito sa mga <em>same-origin URLs</em><sup class="footnote-ref"><a href="#fn2" id="fnref2">2</a></sup></li>
+<li>Kahit na kailangang <em>same-origin</em> ang mga HTTP(s) URLs, puwedeng gamitin ang mga <code>blob:</code> at <code>data:</code> URLs para puwedeng i-download ang mga content na na-generate gamit ang JavaScript, gaya halimbawa sa mga image-editing Web applications.</li>
+</ul>
+<h3 id="href"><code>href</code></h3>
+<p>Naglalaman ng URL<sup class="footnote-ref"><a href="#fn3" id="fnref3">3</a></sup> o URL fragment<sup class="footnote-ref"><a href="#fn4" id="fnref4">4</a></sup>.</p>
+<p>Ang URL fragment ay isang <em>name</em> na pinangungunahan ng isang hash mark <code>#</code>, na nagsasabi ng isang panloob na target location (samakatuwid nga, ang <code>id</code> ng isang HTML element) sa loob ng kasalukuyang document. Hindi lang HTTP ang tinatanggap na protocol ng mga browser. Halimbawa, ang <code>file:</code>, <code>ftp:</code>, at <code>mailto:</code> protocols ay gumagana sa maraming browsers.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Ang hyperlink ay sa isang web page isang reference na puwedeng piraso ng data na puwedeng sundan ng mambabasa kapag ito ay ni-click o ni-tap. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Ibig sabihin nito, kailangang ang URL ng kasalukuyang Web page at ng file na ida-download ay may parehas na protocol, port, at host. Samakatuwid nga, hindi puwedeng i-download ng web page sa <code>app.antares.org</code> ang isang file galing sa <code>example.xyz</code>. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Ang URL o Uniform Resource Locator ay isang paraan para mabigyan ng identification ang mga resource sa World Wide Web. Para itong <em>address</em> kung saan makikita ang iba’t ibang mga resource. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>Ang isang URL fragment ay isang bahagi ng URL na tumutukoy sa isang parte ng isang resource. Kung ang URL ay papunta sa isang buong Web page, isang buong file, o isang buong resource, ang fragment ay papunta sa isang bahagi lang ng Web page. Kadalasan na, ito ang bahaging kasunod ng <code>#</code> sa mga URL. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>

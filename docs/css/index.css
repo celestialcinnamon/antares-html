@@ -164,3 +164,21 @@ ol p {
     margin: auto;
     display: block;
 }
+
+.note {
+    padding: 1rem;
+    border: 1px solid var(--primary-dark);
+    max-width: 50ch;
+    margin: auto;
+}
+
+.note h4 {
+    text-transform: uppercase;
+    margin: -1rem;
+    margin-bottom: 1rem;
+    background-color: var(--primary-dark);
+    color: #fff;    
+    padding: 1rem;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+}

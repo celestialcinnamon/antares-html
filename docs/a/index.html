@@ -184,16 +184,18 @@
                         gaya
                         ito ng sa <code>_self</code>.</li>
                 </ul>
-                <h4 id="notes-1">NOTES:</h4>
-                <ul>
-                    <li>Kapag ginagamit mo ang <code>target</code> na attribute, pag-isipan mo ring ilagay ang
-                        <code>rel="noreferrer"</code> para maiwasan ang pananamantala sa <code>window.opener</code> API.</li>
-                    <li>Kapag ginagamit mo ang <code>target="_blank"</code>, bubukas ang link mo sa bagong tab, pero magra-run
-                        pa
-                        rin ito sa kaparehong process ng page mo. Kung may maraming JS operations ang bagong tab na ito, babagal
-                        ang
-                        dalawang pages mo. Para maiwasan ito, gamitin ang <code>rel="noopener"</code></li>
-                </ul>
+                <section class="note">
+                    <h4 id="notes-1">Notes:</h4>
+                    <ul>
+                        <li>Kapag ginagamit mo ang <code>target</code> na attribute, pag-isipan mo ring ilagay ang
+                            <code>rel="noreferrer"</code> para maiwasan ang pananamantala sa <code>window.opener</code> API.</li>
+                        <li>Kapag ginagamit mo ang <code>target="_blank"</code>, bubukas ang link mo sa bagong tab, pero magra-run
+                            pa
+                            rin ito sa kaparehong process ng page mo. Kung may maraming JS operations ang bagong tab na ito, babagal
+                            ang
+                            dalawang pages mo. Para maiwasan ito, gamitin ang <code>rel="noopener"</code></li>
+                    </ul>
+                </section>
                 <h3 id="type"><code>type</code></h3>
                 <p>Nagsasabi ng media type ng naka-link na URL. Gumagamit ito ng <abbr
                         title="Ang MIME type (ngayon ay tinatawag nang &quot;media type&quot;, at kung minsan ay &quot;content type&quot;) ay isang *string* na kasamang isini-send sa mga files para malaman ang filetype nito (at para malaman ang format ng content nito, gaya halimbawa ng `audio/mp3` o `image/png`)">MIME</abbr>

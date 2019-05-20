@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -15,6 +16,7 @@ html {
 
     --text-heading: #000;
     --text-normal: #333;
+    --text-accent-heading: #604D4C;
 }
 
 :lang(en) {
@@ -252,10 +254,13 @@ ol p {
 .header-hero {
     background-color: var(--primary);
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     padding: 1rem;
     border-top: 0.5rem solid var(--accent);
     position: sticky;
     top: 0;
+    z-index: 9;
 }
 
 [data-scroll-dir-y=1] .header-hero {
@@ -334,15 +339,112 @@ ol p {
     max-width: 30ch;
     margin: 0;
     margin-left: auto;
+    color: var(--primary-dark);
 }
 
-@supports (display:grid) {
-    .article-header {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: 1fr auto;
-        justify-content: start;
-        text-align: left;
-        gap: 1rem;
+
+.main-article section:not([class]) {
+    padding-bottom: 2rem;
+    margin: 0;
+    margin-left: auto;
+    max-width: 80ch;
+}
+
+
+.toc {
+    margin: 3rem auto;
+    width: 70%;
+    display: block;
+}
+
+.toc-title {
+    font-size: 0.75rem;
+    color: var(--text-accent-heading);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.toc ul {
+    position: relative;
+    max-width: 60ch;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    margin-left: 40px;
+}
+
+.toc ul::before {
+    content: '';
+    height: 100%;
+    width: 3px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: var(--accent);
+}
+
+.toc li {
+    list-style: none;
+}
+
+.toc a {
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    background: none;
+    color: var(--primary-dark);
+    padding: 1rem 0;
+}
+
+@media (min-width: 900px) {
+    .toc {
+        float: left;
+        position: sticky;
+        top: 6rem;
+        width: auto;
     }
+
+    
+    @supports (display:grid) {
+        .article-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr auto;
+            justify-content: start;
+            text-align: left;
+            gap: 1rem;
+            padding-top: var(--padding-top);
+
+            --padding-top: 7rem;
+        }
+
+        .article-header::before {
+            margin-top: calc(var(--padding-top) * -1);
+        }
+
+        .article-header p {
+            color: #fff;
+        }
+    }
+
+    
+    .main-article section:not([class]) > h2,
+    .main-article section:not([class]) > h3 {
+        position: sticky;
+        top: 5rem;
+        padding: 1rem;
+        background-color: #fff;
+    }
+
+    .main-article section:not([class]) > h3 {
+        top: 8rem;
+    }
+}
+
+/* Override Prism theme styles */ 
+pre[class*="language-"] {
+    margin: auto;
 }

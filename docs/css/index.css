@@ -399,6 +399,10 @@ ol p {
     padding: 1rem 0;
 }
 
+h1.aux-title {
+    color: var(--primary-dark);
+}
+
 @media (min-width: 900px) {
     .toc {
         float: left;
@@ -407,6 +411,9 @@ ol p {
         width: auto;
     }
 
+    h1.aux-title {
+        color: #fff
+    }
     
     @supports (display:grid) {
         .article-header {
@@ -447,4 +454,52 @@ ol p {
 /* Override Prism theme styles */ 
 pre[class*="language-"] {
     margin: auto;
+}
+
+.link-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-gap: 0.5rem;
+    list-style: none;
+    max-width: 100ch;
+    width: 100%;
+    padding: 1rem;
+}
+
+.link-cards li {
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+}
+
+.link-cards a {
+    display: grid;
+    height: 100%;
+    background: none;
+    justify-content: center;
+    text-align: center; 
+}
+
+.link-cards .disabled {
+    opacity: 0.5;
+}
+
+.link-cards .disabled:hover {
+    opacity: 1;
+}
+
+.link-cards a:hover {
+    background-color: var(--primary);
+    box-shadow: 0 4px 30px #009A59aa;
+    transition: background-color 300ms, box-shadow 300ms;
+}
+
+.link-cards .code {
+    align-self: center;
+}
+
+.link-cards .code code {
+    all: unset;
+    font-size: 1.5rem;
+    font-weight: bold;
 }

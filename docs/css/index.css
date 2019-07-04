@@ -147,10 +147,6 @@ ol p {
     from {
         background-color: #fe0;
     }
-
-    to {
-        background-color: initial;
-    }
 }
 
 .footnotes-sep {
@@ -396,7 +392,6 @@ ol p {
     text-decoration: none;
     background: none;
     color: var(--primary-dark);
-    padding: 1rem 0;
 }
 
 h1.aux-title {
